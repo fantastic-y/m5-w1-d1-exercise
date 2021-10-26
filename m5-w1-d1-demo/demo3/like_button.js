@@ -3,9 +3,9 @@
 const e = React.createElement;
 
 class LikeButton extends React.Component {
-  constructor() {
-    super();
-    this.state = {  };
+  constructor(props) {
+    super(props);
+    this.state = { liked: false }; //state is not a must, if you do not have a state, you do not need a constructor
   }
 
   render() {
@@ -14,7 +14,9 @@ class LikeButton extends React.Component {
     }
 
     return e(
-      
+      'button',
+      { onClick: () => this.setState ({ liked: true }) },
+      'Like'
     );
   }
 }

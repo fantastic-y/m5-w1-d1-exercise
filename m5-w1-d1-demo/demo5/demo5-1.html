@@ -8,7 +8,13 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
     <script type="text/babel" src="formatname.js">
-
+      function formatName(user) {
+        return user.firstName + ' ' + user.lastName;
+      }
+      const user = {
+        firstName: 'West',
+        lastName: 'Cliff',
+      };
     </script>
 </head>
   <body>
